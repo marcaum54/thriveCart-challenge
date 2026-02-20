@@ -24,28 +24,28 @@ beforeEach(function () {
     );
 });
 
-test('basket with (B01 + G01)', function () {
+test('basket with (B01 + G01) expected 37.85 as total', function () {
     $this->basket->add('B01');
     $this->basket->add('G01');
 
     expect($this->basket->total())->toBe(37.85);
 });
 
-test('basket with (R01 + R01)', function () {
+test('basket with (R01 + R01) expected 54.37 as total', function () {
     $this->basket->add('R01');
     $this->basket->add('R01');
 
     expect($this->basket->total())->toBe(54.37);
 });
 
-test('basket with (R01 + G01)', function () {
+test('basket with (R01 + G01) expected 60.85 as total', function () {
     $this->basket->add('R01');
     $this->basket->add('G01');
 
     expect($this->basket->total())->toBe(60.85);
 });
 
-test('complex basket with (B01 + B01 + R01 + R01 + R01)', function () {
+test('complex basket with (B01 + B01 + R01 + R01 + R01) expected 98.27 as total', function () {
     $this->basket->add('B01');
     $this->basket->add('B01');
     $this->basket->add('R01');
